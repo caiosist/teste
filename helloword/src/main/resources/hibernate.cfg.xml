@@ -7,7 +7,7 @@
 
 		<!-- Connection of Configuration -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url"> jdbc:mysql://localhost/automafoz</property>
+		<property name="connection.url"> jdbc:mysql://localhost/helloword</property>
 		<property name="connection.username">caio</property>
 		<property name="connection.password">123456</property>
 
@@ -23,23 +23,11 @@
 
 		<!-- Mapping Entities -->
 
-		<mapping class="entities.Perfil" />
-		<mapping class="entities.Cliente" />
-		<mapping class="entities.FormaPagamento" />
-		<mapping class="entities.CondPagamento" />
-		<mapping class="entities.Parcela" />
-		<mapping class="entities.Fornecedor" />
-		<mapping class="entities.Funcionario" />
-		<mapping class="entities.Produto" />
-		<mapping class="entities.Compra" />
-		<mapping class="entities.ItemCompra" />
-		<mapping class="entities.ItemVenda" />
-		<mapping class="entities.ContaReceber" />
-		<mapping class="entities.ContaPagar" />
-		<mapping class="entities.Venda" />
-		<mapping class="entities.Usuario" />
-		<mapping class="entities.Caixa" />
-		<mapping class="entities.Movimento" />
-
+		<mapping class="entities.Empresa" />
+		<mapping class="entities.PlanilhaUp" />
+		<mapping class="entities.PlanilhaDown" />
+		<mapping class="entities.Plano" />
+		<mapping class="entities.Veiculo" />
+		
 	</session-factory>
 </hibernate-configuration>
