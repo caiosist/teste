@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Connection of Configuration -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url"> jdbc:mysql://localhost/automafoz</property>
+		<property name="connection.username">caio</property>
+		<property name="connection.password">123456</property>
+
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Impression of SQL -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<!-- Dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Mapping Entities -->
+
+		<mapping class="entities.Perfil" />
+		<mapping class="entities.Cliente" />
+		<mapping class="entities.FormaPagamento" />
+		<mapping class="entities.CondPagamento" />
+		<mapping class="entities.Parcela" />
+		<mapping class="entities.Fornecedor" />
+		<mapping class="entities.Funcionario" />
+		<mapping class="entities.Produto" />
+		<mapping class="entities.Compra" />
+		<mapping class="entities.ItemCompra" />
+		<mapping class="entities.ItemVenda" />
+		<mapping class="entities.ContaReceber" />
+		<mapping class="entities.ContaPagar" />
+		<mapping class="entities.Venda" />
+		<mapping class="entities.Usuario" />
+		<mapping class="entities.Caixa" />
+		<mapping class="entities.Movimento" />
+
+	</session-factory>
+</hibernate-configuration>
