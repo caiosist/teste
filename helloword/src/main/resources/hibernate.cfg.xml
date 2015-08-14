@@ -6,10 +6,10 @@
 	<session-factory>
 
 		<!-- Connection of Configuration -->
-		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url"> jdbc:mysql://localhost/helloword</property>
-		<property name="connection.username">caio</property>
-		<property name="connection.password">123456</property>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url"> jdbc:postgresql://localhost:5432/helloword</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">postgres</property>
 
 		<property name="current_session_context_class">thread</property>
 
@@ -18,16 +18,20 @@
 		<property name="format_sql">true</property>
 
 		<!-- Dialect -->
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 		<property name="hbm2ddl.auto">update</property>
 
 		<!-- Mapping Entities -->
 
-		<mapping class="entities.Empresa" />
-		<mapping class="entities.PlanilhaUp" />
-		<mapping class="entities.PlanilhaDown" />
-		<mapping class="entities.Plano" />
-		<mapping class="entities.Veiculo" />
-		
+		<mapping class="br.com.extratosfacil.entities.Empresa" />
+		<mapping class="br.com.extratosfacil.entities.PlanilhaUpload" />
+		<mapping class="br.com.extratosfacil.entities.PlanilhaDownload" />
+		<mapping class="br.com.extratosfacil.entities.Plano" />
+		<mapping class="br.com.extratosfacil.entities.Veiculo" />
+		<mapping class="br.com.extratosfacil.entities.Usuario" />
+		<mapping class="br.com.extratosfacil.entities.location.Cidade" />
+		<mapping class="br.com.extratosfacil.entities.location.Estado" />
+		<mapping class="br.com.extratosfacil.entities.location.Pais" />
+
 	</session-factory>
 </hibernate-configuration>
